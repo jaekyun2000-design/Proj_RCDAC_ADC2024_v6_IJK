@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="992fa969-a59f-42b2-abae-ab14b32533fb" name="Changes" comment=".">
+      <change beforePath="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q05_Decoder/Q05_00_Decoder_KJH2.py" beforeDir="false" afterPath="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q05_Decoder/Q05_00_Decoder_KJH2.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2criN99CZdYa5z6zqHVQ20zRChR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/KJH91-LAB-DESK/OneDrive/WS_Python/Proj_RCDAC_ADC2024_V5/KJH91_Projects/Project_ADC/Layoutgen_code/Q05_Decoder&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KJH91-LAB-DESK\OneDrive\WS_Python\Proj_RCDAC_ADC2024_V5\KJH91_Projects\Project_ADC\Layoutgen_code\Q05_Decoder" />
+      <recent name="F:\Onedrive_Private\OneDrive\WS_Python\Proj_RCDAC_ADC2024_V5\KJH91_Projects\Project_ADC\Layoutgen_code\R00_Combine_P00_Q05" />
+      <recent name="F:\Onedrive_Private\OneDrive\WS_Python\Proj_RCDAC_ADC2024_V5\KJH91_Projects\Project_ADC\Layoutgen_code\Q04_Decoder_Unit" />
+      <recent name="F:\Onedrive_Private\OneDrive\WS_Python\Proj_RCDAC_ADC2024_V5\KJH91_Projects\Project_ADC\Layoutgen_code\Q03_Decoder_Inv" />
+      <recent name="F:\Onedrive_Private\OneDrive\WS_Python\Proj_RCDAC_ADC2024_V5\KJH91_Projects\Project_ADC\Layoutgen_code\YY_NewMethod" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Q05_00_Decoder_KJH2">
+    <configuration name="Q00_02_Nand_KJH0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proj_RCDAC_ADC2024_V5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q00_Decoder_Nand" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q00_Decoder_Nand/Q00_02_Nand_KJH0.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Q04_01_Routing_KJH0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proj_RCDAC_ADC2024_V5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q04_Decoder_Unit" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q04_Decoder_Unit/Q04_01_Routing_KJH0.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Q05_00_Decoder_KJH1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proj_RCDAC_ADC2024_V5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q05_Decoder" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q05_Decoder/Q05_00_Decoder_KJH1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Q05_00_Decoder_KJH2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proj_RCDAC_ADC2024_V5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q05_Decoder" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q05_Decoder/Q05_00_Decoder_KJH2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="R00_00_Combine_KJH1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Proj_RCDAC_ADC2024_V5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/R00_Combine_P00_Q05" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/R00_Combine_P00_Q05/R00_00_Combine_KJH1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Q05_00_Decoder_KJH2" />
+        <item itemvalue="Python.Q04_01_Routing_KJH0" />
+        <item itemvalue="Python.Q00_02_Nand_KJH0" />
+        <item itemvalue="Python.R00_00_Combine_KJH1" />
+        <item itemvalue="Python.Q05_00_Decoder_KJH1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="992fa969-a59f-42b2-abae-ab14b32533fb" name="Changes" comment="" />
+      <created>1708876055504</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708876055504</updated>
+    </task>
+    <task id="LOCAL-00023" summary=".">
+      <created>1709833227038</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1709833227038</updated>
+    </task>
+    <task id="LOCAL-00024" summary=".">
+      <created>1709876672456</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1709876672456</updated>
+    </task>
+    <task id="LOCAL-00025" summary=".">
+      <created>1709877089304</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1709877089304</updated>
+    </task>
+    <task id="LOCAL-00026" summary=".">
+      <created>1709886808397</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1709886808397</updated>
+    </task>
+    <task id="LOCAL-00027" summary=".">
+      <created>1709887337048</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1709887337048</updated>
+    </task>
+    <task id="LOCAL-00028" summary=".">
+      <created>1709887374141</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1709887374141</updated>
+    </task>
+    <task id="LOCAL-00029" summary=".">
+      <created>1709887463096</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1709887463096</updated>
+    </task>
+    <task id="LOCAL-00030" summary=".">
+      <created>1709966459927</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1709966459927</updated>
+    </task>
+    <task id="LOCAL-00031" summary=".">
+      <created>1709967984820</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1709967984820</updated>
+    </task>
+    <task id="LOCAL-00032" summary=".">
+      <created>1709968266452</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1709968266452</updated>
+    </task>
+    <task id="LOCAL-00033" summary=".">
+      <created>1709973505063</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1709973505063</updated>
+    </task>
+    <task id="LOCAL-00034" summary=".">
+      <created>1709978077683</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1709978077683</updated>
+    </task>
+    <task id="LOCAL-00035" summary=".">
+      <created>1709981752649</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1709981752649</updated>
+    </task>
+    <task id="LOCAL-00036" summary=".">
+      <created>1709982114254</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1709982114254</updated>
+    </task>
+    <task id="LOCAL-00037" summary=".">
+      <created>1709988001354</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1709988001354</updated>
+    </task>
+    <task id="LOCAL-00038" summary=".">
+      <created>1709991319901</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1709991319901</updated>
+    </task>
+    <task id="LOCAL-00039" summary=".">
+      <created>1709995729067</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1709995729067</updated>
+    </task>
+    <task id="LOCAL-00040" summary=".">
+      <created>1709997854638</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1709997854638</updated>
+    </task>
+    <task id="LOCAL-00041" summary=".">
+      <created>1710004423272</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1710004423272</updated>
+    </task>
+    <task id="LOCAL-00042" summary=".">
+      <created>1710006503935</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1710006503935</updated>
+    </task>
+    <task id="LOCAL-00043" summary=".">
+      <created>1710068350686</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1710068350686</updated>
+    </task>
+    <task id="LOCAL-00044" summary=".">
+      <created>1710082310735</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1710082310735</updated>
+    </task>
+    <task id="LOCAL-00045" summary=".">
+      <created>1710087951974</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1710087951975</updated>
+    </task>
+    <task id="LOCAL-00046" summary=".">
+      <created>1710092582502</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1710092582502</updated>
+    </task>
+    <task id="LOCAL-00047" summary=".">
+      <created>1710096727669</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1710096727669</updated>
+    </task>
+    <task id="LOCAL-00048" summary=".">
+      <created>1710132115135</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1710132115135</updated>
+    </task>
+    <task id="LOCAL-00049" summary=".">
+      <created>1710136630492</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1710136630492</updated>
+    </task>
+    <task id="LOCAL-00050" summary=".">
+      <created>1710153779102</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1710153779103</updated>
+    </task>
+    <task id="LOCAL-00051" summary=".">
+      <created>1710156662004</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1710156662004</updated>
+    </task>
+    <task id="LOCAL-00052" summary=".">
+      <created>1710158991338</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1710158991338</updated>
+    </task>
+    <task id="LOCAL-00053" summary=".">
+      <created>1710220969399</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1710220969399</updated>
+    </task>
+    <task id="LOCAL-00054" summary=".">
+      <created>1710223183344</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1710223183344</updated>
+    </task>
+    <task id="LOCAL-00055" summary=".">
+      <created>1710223251625</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1710223251625</updated>
+    </task>
+    <task id="LOCAL-00056" summary=".">
+      <created>1710243264643</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1710243264644</updated>
+    </task>
+    <task id="LOCAL-00057" summary=".">
+      <created>1710244077472</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1710244077472</updated>
+    </task>
+    <task id="LOCAL-00058" summary=".">
+      <created>1710265809958</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1710265809958</updated>
+    </task>
+    <task id="LOCAL-00059" summary=".">
+      <created>1710266235209</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1710266235209</updated>
+    </task>
+    <task id="LOCAL-00060" summary=".">
+      <created>1710266712932</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1710266712932</updated>
+    </task>
+    <task id="LOCAL-00061" summary=".">
+      <created>1710334310443</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1710334310443</updated>
+    </task>
+    <task id="LOCAL-00062" summary=".">
+      <created>1710344629006</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1710344629006</updated>
+    </task>
+    <task id="LOCAL-00063" summary=".">
+      <created>1710346443967</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1710346443967</updated>
+    </task>
+    <task id="LOCAL-00064" summary=".">
+      <created>1710347419986</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1710347419986</updated>
+    </task>
+    <task id="LOCAL-00065" summary=".">
+      <created>1710350979131</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1710350979131</updated>
+    </task>
+    <task id="LOCAL-00066" summary=".">
+      <created>1710351974807</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1710351974807</updated>
+    </task>
+    <task id="LOCAL-00067" summary=".">
+      <created>1710392211188</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1710392211189</updated>
+    </task>
+    <task id="LOCAL-00068" summary=".">
+      <created>1710392640511</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1710392640511</updated>
+    </task>
+    <task id="LOCAL-00069" summary=".">
+      <created>1710394063144</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1710394063144</updated>
+    </task>
+    <task id="LOCAL-00070" summary=".">
+      <created>1710396555304</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1710396555304</updated>
+    </task>
+    <task id="LOCAL-00071" summary=".">
+      <created>1710397304294</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1710397304294</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="M2 --&gt; M3&#10;BND_ResConn_Vtc_M3" />
+    <MESSAGE value="initial" />
+    <MESSAGE value="finish" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/P00_RDAC/P00_00_RArray.py</url>
+          <line>440</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q99_Decoder_for_meeting/Q01_01_DecoderArray.py</url>
+          <line>1045</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q04_Decoder_Unit/Q04_01_Routing_KJH0.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/R00_Combine_P00_Q05/R00_00_Combine_KJH1.py</url>
+          <line>471</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q05_Decoder/Q05_00_Decoder_KJH2.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/KJH91_Projects/Project_ADC/Layoutgen_code/Q05_Decoder/Q05_00_Decoder_KJH2.py</url>
+          <line>519</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
