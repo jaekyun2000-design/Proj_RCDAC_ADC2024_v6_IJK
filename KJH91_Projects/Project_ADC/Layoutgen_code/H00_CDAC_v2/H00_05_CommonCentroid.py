@@ -1271,7 +1271,7 @@ if __name__ == '__main__':
         _MetalLength=1410,  # (8bit size: 1414/ 10bit size: 2800/ 12bit size: 4200)
         _MetalSpacing=50,
 	    # # CommonCentroid Array
-	    _Bitsize=8,  # Total bit size of CDAC
+	    _Bitsize=10,  # Total bit size of CDAC
         # #Unit Cap
         _NumOfElement=2,  # (매우 복잡..) Driver Common Centroid가 아니면 1// 맞으면 2
 

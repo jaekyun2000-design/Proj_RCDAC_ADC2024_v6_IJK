@@ -1054,7 +1054,7 @@ if __name__ == '__main__':
     from KJH91_Projects.Project_ADC.Library_and_Engine import DRCchecker_KJH0
 
     libname = 'Proj_ADC_A_building_block_KJH'
-    cellname = 'A03_NmosWithDummy_KJH2_96'
+    cellname = 'A03_NmosWithDummy_KJH2_97'
     _fileName = cellname + '.gds'
 
     ''' Input Parameters for Layout Object '''
@@ -1062,7 +1062,7 @@ if __name__ == '__main__':
 
 
 #NMOS
-_NMOSNumberofGate	= 15,
+_NMOSNumberofGate	= 14,
 _NMOSChannelWidth	= 300,
 _NMOSChannellength	= 30,
 _GateSpacing		= None,

@@ -19,6 +19,7 @@ from KJH91_Projects.Project_ADC.Layoutgen_code.K00_SARLogicWtBuffers_YJH import 
 from KJH91_Projects.Project_ADC.Layoutgen_code.E01_ComparatorWtLatch_YJH import E01_05_StrongArmWtSRLatch
 from KJH91_Projects.Project_ADC.Layoutgen_code.J00_CDACPreDriver_InvBuffer_KJH0 import J00_01_InverterChain_KJH
 
+# 1/12 ~
 
 ## Define Class
 class _SARLogicWtComparator(StickDiagram_KJH1._StickDiagram_KJH):

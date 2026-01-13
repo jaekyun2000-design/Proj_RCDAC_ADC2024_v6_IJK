@@ -947,14 +947,14 @@ class _NAND(StickDiagram_KJH1._StickDiagram_KJH):
         ## Define coordinates
         self._DesignParameter['BND_Out_Vtc_M2']['_XYCoordinates'] = tmpXY
 
-
+        # 1/13 ych 주석 처리
         ### V1 Center 2 Center Space 때문에 어긋나게 배치하기 위해 Source Via Drain Via의 Y 좌표를 Swap
-        tmp1 = self._DesignParameter['SRF_Pulldown']['_DesignObj']._DesignParameter['SRF_NMOSA']['_DesignObj']._DesignParameter['SRF_Source_ViaM1M2']['_XYCoordinates'][0][1]
-        tmp2 = self._DesignParameter['SRF_Pulldown']['_DesignObj']._DesignParameter['SRF_NMOSA']['_DesignObj']._DesignParameter['SRF_Drain_ViaM1M2']['_XYCoordinates'][0][1]
-
-        self._DesignParameter['SRF_Pulldown']['_DesignObj']._DesignParameter['SRF_NMOSA']['_DesignObj']._DesignParameter['SRF_Source_ViaM1M2']['_XYCoordinates'][0][1] = tmp2
-        self._DesignParameter['SRF_Pulldown']['_DesignObj']._DesignParameter['SRF_NMOSA']['_DesignObj']._DesignParameter['SRF_Source_ViaM1M2']['_XYCoordinates'][1][1] = tmp2
-        self._DesignParameter['SRF_Pulldown']['_DesignObj']._DesignParameter['SRF_NMOSA']['_DesignObj']._DesignParameter['SRF_Drain_ViaM1M2']['_XYCoordinates'][0][1] = tmp1
+        # tmp1 = self._DesignParameter['SRF_Pulldown']['_DesignObj']._DesignParameter['SRF_NMOSA']['_DesignObj']._DesignParameter['SRF_Source_ViaM1M2']['_XYCoordinates'][0][1]
+        # tmp2 = self._DesignParameter['SRF_Pulldown']['_DesignObj']._DesignParameter['SRF_NMOSA']['_DesignObj']._DesignParameter['SRF_Drain_ViaM1M2']['_XYCoordinates'][0][1]
+        #
+        # self._DesignParameter['SRF_Pulldown']['_DesignObj']._DesignParameter['SRF_NMOSA']['_DesignObj']._DesignParameter['SRF_Source_ViaM1M2']['_XYCoordinates'][0][1] = tmp2
+        # self._DesignParameter['SRF_Pulldown']['_DesignObj']._DesignParameter['SRF_NMOSA']['_DesignObj']._DesignParameter['SRF_Source_ViaM1M2']['_XYCoordinates'][1][1] = tmp2
+        # self._DesignParameter['SRF_Pulldown']['_DesignObj']._DesignParameter['SRF_NMOSA']['_DesignObj']._DesignParameter['SRF_Drain_ViaM1M2']['_XYCoordinates'][0][1] = tmp1
 
         # NumOfSource = len(self._DesignParameter['SRF_Pulldown']['_DesignObj']._DesignParameter['SRF_NMOSA']['_DesignObj']._DesignParameter['SRF_Source_ViaM1M2']['_XYCoordinates'])
         # for i in range(NumOfSource):
@@ -982,7 +982,7 @@ if __name__ == '__main__':
     ## LibraryName: ex)Proj_ADC_A_my_building_block
     libname = 'Proj_ADC_E01_ComparatorWtLatch_YJH'
     ## CellName: ex)C01_cap_array_v2_84
-    cellname = 'E01_01_NAND_YJH_v2'
+    cellname = 'E01_01_NAND_YJH_v3'
     _fileName = cellname + '.gds'
 
     ''' Input Parameters for Layout Object '''

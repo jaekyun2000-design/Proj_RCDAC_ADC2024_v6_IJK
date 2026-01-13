@@ -1222,20 +1222,20 @@ if __name__ == '__main__':
     ## LibraryName: ex)Proj_ADC_A_my_building_block
     libname = 'Proj_ADC_D03_SARLogic_Nand_KJH'
     ## CellName: ex)C01_cap_array_v2_84
-    cellname = 'D03_00_Pulldown_v0_82'
+    cellname = 'D03_00_Pulldown_v0_84'
     _fileName = cellname + '.gds'
 
     ''' Input Parameters for Layout Object '''
     InputParams = dict(
 
         # NMOSA
-        _NMOSA_NMOSNumberofGate=1,  # number
-        _NMOSA_NMOSChannelWidth=200,  # number
+        _NMOSA_NMOSNumberofGate=6,  # number
+        _NMOSA_NMOSChannelWidth=400,  # number
         _NMOSA_NMOSChannellength=30,  # number
         _NMOSA_GateSpacing=None,  # None/number
         _NMOSA_SDWidth=None,  # None/number
         _NMOSA_XVT='SLVT',  # 'XVT' ex)SLVT LVT RVT HVT
-        _NMOSA_PCCrit=True,  # None/True
+        _NMOSA_PCCrit=None,  # None/True
 
             # Source_node_ViaM1M2
         _NMOSA_Source_Via_TF=True,  # True/False
@@ -1247,16 +1247,16 @@ if __name__ == '__main__':
         _NMOSA_NMOSDummy=True,  # TF
             # if _PMOSDummy == True
         _NMOSA_NMOSDummy_length=None,  # None/Value
-        _NMOSA_NMOSDummy_placement='Up',  # None/'Up'/'Dn'/
+        _NMOSA_NMOSDummy_placement=None,  # None/'Up'/'Dn'/
 
         # NMOSB
-        _NMOSB_NMOSNumberofGate=1,  # number
-        _NMOSB_NMOSChannelWidth=200,  # number
+        _NMOSB_NMOSNumberofGate=6,  # number
+        _NMOSB_NMOSChannelWidth=400,  # number
         _NMOSB_NMOSChannellength=30,  # number
         _NMOSB_GateSpacing=None,  # None/number
         _NMOSB_SDWidth=None,  # None/number
         _NMOSB_XVT='SLVT',  # 'XVT' ex)SLVT LVT RVT HVT
-        _NMOSB_PCCrit=True,  # None/True
+        _NMOSB_PCCrit=None,  # None/True
 
             # Source_node_ViaM1M2
         _NMOSB_Source_Via_TF=False,  # True/False
@@ -1268,7 +1268,7 @@ if __name__ == '__main__':
         _NMOSB_NMOSDummy=True,  # TF
             # if _PMOSDummy == True
         _NMOSB_NMOSDummy_length=None,  # None/Value
-        _NMOSB_NMOSDummy_placement='Up',  # None/'Up'/'Dn'/
+        _NMOSB_NMOSDummy_placement=None,  # None/'Up'/'Dn'/
 
     )
 
