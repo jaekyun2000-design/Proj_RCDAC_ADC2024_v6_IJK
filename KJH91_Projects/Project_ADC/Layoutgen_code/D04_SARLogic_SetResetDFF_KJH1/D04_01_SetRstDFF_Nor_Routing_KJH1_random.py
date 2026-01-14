@@ -5581,401 +5581,422 @@ class _SetRstDFF_Nor_Routing(StickDiagram_KJH1._StickDiagram_KJH):
         print('##     Calculation_End      ##')
         print('##############################')
 
+# 1/14 clear
+
 ############################################################################################################################################################ START MAIN
 if __name__ == '__main__':
 
     ''' Check Time'''
     start_time = time.time()
 
+    import random
     from KJH91_Projects.Project_ADC.Library_and_Engine.Private import MyInfo
     from KJH91_Projects.Project_ADC.Library_and_Engine import DRCchecker_KJH0
 
-    ## LibraryName: ex)Proj_ADC_A_my_building_block
-    libname = 'Proj_ZZ00_RcdacSar_D04_01_SetRstDFF_Nor_Routing'
-    ## CellName: ex)C01_cap_array_v2_84l
-    cellname = 'D04_01_SetRstDFF_Nor_Routing_v0_290'
-    _fileName = cellname + '.gds'
-
-    ''' Input Parameters for Layout Object '''
-    InputParams = dict(
-
-        _Test_distance = 330, # 350
-        _Routing_width =  50,
-        _Routing_distance = 80, #80
-
-    ## DFF Common
-        _DFF_Pbody_NumCont      = 2, # number
-        _DFF_Nbody_NumCont      = 2, # number
-        _DFF_PMOSXvt2NMOSXvt    = 1150, # number
-        _DFF_XvtTop2Pbody       = None, # number/None(Minimum)
-        _DFF_Xvtdown2Nbody      = None, # number/None(Minimum)
-
-    ## Master Xgate1
-        ## Xgate common
-
-        ## Xgate NMOS
-        _Mst_Xgate1_NMOS_NumberofGate           = 1,    #1
-        _Mst_Xgate1_NMOS_ChannelWidth           = 200,  #100
-        _Mst_Xgate1_NMOS_ChannelLength          = 30,
-        _Mst_Xgate1_NMOS_XVT                    = 'HVT',
-        _Mst_Xgate1_NMOS_POGate_Comb_length     = 100,
-
-        ## Xgate PMOS
-        _Mst_Xgate1_PMOS_NumberofGate           = 1,    #1
-        _Mst_Xgate1_PMOS_ChannelWidth           = 400,  #200
-        _Mst_Xgate1_PMOS_ChannelLength          = 30,
-        _Mst_Xgate1_PMOS_XVT                    = 'HVT',
-        _Mst_Xgate1_PMOS_POGate_Comb_length     = 100,
-
-    ## Master Xgate2
-        ## Xgate common
-
-        ## Xgate NMOS
-        _Mst_Xgate2_NMOS_NumberofGate           = 1,
-        _Mst_Xgate2_NMOS_ChannelWidth           = 200,
-        _Mst_Xgate2_NMOS_ChannelLength          = 30,
-        _Mst_Xgate2_NMOS_XVT                    = 'SLVT',
-        _Mst_Xgate2_NMOS_POGate_Comb_length     = 100,
-
-        ## Xgate PMOS
-        _Mst_Xgate2_PMOS_NumberofGate           = 1, #2
-        _Mst_Xgate2_PMOS_ChannelWidth           = 400,
-        _Mst_Xgate2_PMOS_ChannelLength          = 30,
-        _Mst_Xgate2_PMOS_XVT                    = 'SLVT',
-        _Mst_Xgate2_PMOS_POGate_Comb_length     = 100,
-
-
-    ## Master Nor1
-        ## Nor1 common
-
-        ## NMOS
-            ## NMOS common
-        _Mst_Nor1_NMOS_XVT='HVT',
-
-            ## NMOSA
-        _Mst_Nor1_NMOSA_NumberofGate           = 2,
-        _Mst_Nor1_NMOSA_ChannelWidth           = 200,
-        _Mst_Nor1_NMOSA_ChannelLength          = 30,
-        _Mst_Nor1_NMOSA_POGate_Comb_length     = 100,
-
-            ## NMOSB
-        _Mst_Nor1_NMOSB_NumberofGate           = 2,
-        _Mst_Nor1_NMOSB_ChannelWidth           = 200,
-        _Mst_Nor1_NMOSB_ChannelLength          = 30,
-        _Mst_Nor1_NMOSB_POGate_Comb_length     = 100,
-
-        ## PMOS
-            ## PMOS common
-        _Mst_Nor1_PMOS_XVT='HVT',
-
-            ## PMOSA
-        _Mst_Nor1_PMOSA_NumberofGate            = 4,
-        _Mst_Nor1_PMOSA_ChannelWidth            = 400,
-        _Mst_Nor1_PMOSA_ChannelLength           = 30,
-        _Mst_Nor1_PMOSA_POGate_Comb_length      = 100,
-
-            ## PMOSB
-        _Mst_Nor1_PMOSB_NumberofGate            = 4,
-        _Mst_Nor1_PMOSB_ChannelWidth            = 400,
-        _Mst_Nor1_PMOSB_ChannelLength           = 30,
-        _Mst_Nor1_PMOSB_POGate_Comb_length      = 100,
-
-    ## Master Nor2
-        ## Nor2 common
-
-        ## NMOS
-            ## NMOS common
-        _Mst_Nor2_NMOS_XVT='HVT',
-
-            ## NMOSA
-        _Mst_Nor2_NMOSA_NumberofGate           = 2,
-        _Mst_Nor2_NMOSA_ChannelWidth           = 200,
-        _Mst_Nor2_NMOSA_ChannelLength          = 30,
-        _Mst_Nor2_NMOSA_POGate_Comb_length     = 100,
-
-            ## NMOSB
-        _Mst_Nor2_NMOSB_NumberofGate           = 2,
-        _Mst_Nor2_NMOSB_ChannelWidth           = 200,
-        _Mst_Nor2_NMOSB_ChannelLength          = 30,
-        _Mst_Nor2_NMOSB_POGate_Comb_length     = 100,
-
-        ## PMOS
-            ## PMOS common
-        _Mst_Nor2_PMOS_XVT='HVT',
-
-            ## PMOSA
-        _Mst_Nor2_PMOSA_NumberofGate            = 4,
-        _Mst_Nor2_PMOSA_ChannelWidth            = 400,
-        _Mst_Nor2_PMOSA_ChannelLength           = 30,
-        _Mst_Nor2_PMOSA_POGate_Comb_length      = 100,
-
-            ## PMOSB
-        _Mst_Nor2_PMOSB_NumberofGate            = 4,
-        _Mst_Nor2_PMOSB_ChannelWidth            = 400,
-        _Mst_Nor2_PMOSB_ChannelLength           = 30,
-        _Mst_Nor2_PMOSB_POGate_Comb_length      = 100,
-
-    ## Master Inv1 : Set pre-driver
-        ## Inv1 common
-
-        ## Inv1 NMOS
-        _Mst_Inv1_NMOS_NumberofGate           = 1,
-        _Mst_Inv1_NMOS_ChannelWidth           = 200,
-        _Mst_Inv1_NMOS_ChannelLength          = 30,
-        _Mst_Inv1_NMOS_XVT                    = 'SLVT',
-        _Mst_Inv1_NMOS_POGate_Comb_length     = 100,
-
-        ## Inv1 PMOS
-        _Mst_Inv1_PMOS_NumberofGate           = 1,
-        _Mst_Inv1_PMOS_ChannelWidth           = 400,
-        _Mst_Inv1_PMOS_ChannelLength          = 30,
-        _Mst_Inv1_PMOS_XVT                    = 'SLVT',
-        _Mst_Inv1_PMOS_POGate_Comb_length     = 100,
-
-    ## Master Inv2 : Set driver
-        ## Inv2 common
-
-        ## Inv2 NMOS
-        _Mst_Inv2_NMOS_NumberofGate           = 1,
-        _Mst_Inv2_NMOS_ChannelWidth           = 200,
-        _Mst_Inv2_NMOS_ChannelLength          = 30,
-        _Mst_Inv2_NMOS_XVT                    = 'SLVT',
-        _Mst_Inv2_NMOS_POGate_Comb_length     = 100,
-
-        ## Inv2 PMOS
-        _Mst_Inv2_PMOS_NumberofGate           = 1,
-        _Mst_Inv2_PMOS_ChannelWidth           = 400,
-        _Mst_Inv2_PMOS_ChannelLength          = 30,
-        _Mst_Inv2_PMOS_XVT                    = 'SLVT',
-        _Mst_Inv2_PMOS_POGate_Comb_length     = 100,
-
-
-    ## Master Inv3 : Clock driver
-        ## Inv3 common
-
-        ## Inv3 NMOS
-        _Mst_Inv3_NMOS_NumberofGate           = 1,
-        _Mst_Inv3_NMOS_ChannelWidth           = 200,
-        _Mst_Inv3_NMOS_ChannelLength          = 30,
-        _Mst_Inv3_NMOS_XVT                    = 'SLVT',
-        _Mst_Inv3_NMOS_POGate_Comb_length     = 100,
-
-        ## Inv3 PMOS
-        _Mst_Inv3_PMOS_NumberofGate           = 1,
-        _Mst_Inv3_PMOS_ChannelWidth           = 400,
-        _Mst_Inv3_PMOS_ChannelLength          = 30,
-        _Mst_Inv3_PMOS_XVT                    = 'SLVT',
-        _Mst_Inv3_PMOS_POGate_Comb_length     = 100,
-
-
-
-
-
-
-
-    ## Slave Xgate1
-        ## Xgate common
-
-        ## Xgate NMOS
-        _Slv_Xgate1_NMOS_NumberofGate           = 1,
-        _Slv_Xgate1_NMOS_ChannelWidth           = 200,
-        _Slv_Xgate1_NMOS_ChannelLength          = 30,
-        _Slv_Xgate1_NMOS_XVT                    = 'HVT',
-        _Slv_Xgate1_NMOS_POGate_Comb_length     = 100,
-
-        ## Xgate NMOS
-        _Slv_Xgate1_PMOS_NumberofGate           = 1,
-        _Slv_Xgate1_PMOS_ChannelWidth           = 400,
-        _Slv_Xgate1_PMOS_ChannelLength          = 30,
-        _Slv_Xgate1_PMOS_XVT                    = 'HVT',
-        _Slv_Xgate1_PMOS_POGate_Comb_length     = 100,
-
-    ## Slave Xgate2
-        ## Xgate common
-
-        ## Xgate NMOS
-        _Slv_Xgate2_NMOS_NumberofGate           = 1,
-        _Slv_Xgate2_NMOS_ChannelWidth           = 200,
-        _Slv_Xgate2_NMOS_ChannelLength          = 30,
-        _Slv_Xgate2_NMOS_XVT                    = 'SLVT',
-        _Slv_Xgate2_NMOS_POGate_Comb_length     = 100,
-
-        ## Xgate NMOS
-        _Slv_Xgate2_PMOS_NumberofGate           = 1,
-        _Slv_Xgate2_PMOS_ChannelWidth           = 400,
-        _Slv_Xgate2_PMOS_ChannelLength          = 30,
-        _Slv_Xgate2_PMOS_XVT                    = 'SLVT',
-        _Slv_Xgate2_PMOS_POGate_Comb_length     = 100,
-
-
-    ## Slave Nor1
-        ## Nor1 common
-
-        ## NMOS
-            ## NMOS common
-        _Slv_Nor1_NMOS_XVT='HVT',
-
-            ## NMOSA
-        _Slv_Nor1_NMOSA_NumberofGate           = 2,
-        _Slv_Nor1_NMOSA_ChannelWidth           = 200,
-        _Slv_Nor1_NMOSA_ChannelLength          = 30,
-        _Slv_Nor1_NMOSA_POGate_Comb_length     = 100,
-
-            ## NMOSB
-        _Slv_Nor1_NMOSB_NumberofGate           = 2,
-        _Slv_Nor1_NMOSB_ChannelWidth           = 200,
-        _Slv_Nor1_NMOSB_ChannelLength          = 30,
-        _Slv_Nor1_NMOSB_POGate_Comb_length     = 100,
-
-        ## PMOS
-            ## PMOS common
-        _Slv_Nor1_PMOS_XVT='HVT',
-
-            ## PMOSA
-        _Slv_Nor1_PMOSA_NumberofGate            = 4,
-        _Slv_Nor1_PMOSA_ChannelWidth            = 400,
-        _Slv_Nor1_PMOSA_ChannelLength           = 30,
-        _Slv_Nor1_PMOSA_POGate_Comb_length      = 100,
-
-            ## PMOSB
-        _Slv_Nor1_PMOSB_NumberofGate            = 4,
-        _Slv_Nor1_PMOSB_ChannelWidth            = 400,
-        _Slv_Nor1_PMOSB_ChannelLength           = 30,
-        _Slv_Nor1_PMOSB_POGate_Comb_length      = 100,
-
-    ## Slave Nor2
-        ## Nor2 common
-
-        ## NMOS
-            ## NMOS common
-        _Slv_Nor2_NMOS_XVT='HVT',
-
-            ## NMOSA
-        _Slv_Nor2_NMOSA_NumberofGate           = 2,
-        _Slv_Nor2_NMOSA_ChannelWidth           = 200,
-        _Slv_Nor2_NMOSA_ChannelLength          = 30,
-        _Slv_Nor2_NMOSA_POGate_Comb_length     = 100,
-
-            ## NMOSB
-        _Slv_Nor2_NMOSB_NumberofGate           = 2,
-        _Slv_Nor2_NMOSB_ChannelWidth           = 200,
-        _Slv_Nor2_NMOSB_ChannelLength          = 30,
-        _Slv_Nor2_NMOSB_POGate_Comb_length     = 100,
-
-        ## PMOS
-            ## PMOS common
-        _Slv_Nor2_PMOS_XVT='HVT',
-
-            ## PMOSA
-        _Slv_Nor2_PMOSA_NumberofGate            = 4,
-        _Slv_Nor2_PMOSA_ChannelWidth            = 400,
-        _Slv_Nor2_PMOSA_ChannelLength           = 30,
-        _Slv_Nor2_PMOSA_POGate_Comb_length      = 100,
-
-            ## PMOSB
-        _Slv_Nor2_PMOSB_NumberofGate            = 4,
-        _Slv_Nor2_PMOSB_ChannelWidth            = 400,
-        _Slv_Nor2_PMOSB_ChannelLength           = 30,
-        _Slv_Nor2_PMOSB_POGate_Comb_length      = 100,
-
-    ## Slave Inv1 : ReSet pre-driver
-        ## Inv1 common
-
-        ## Inv1 NMOS
-        _Slv_Inv1_NMOS_NumberofGate           = 1,
-        _Slv_Inv1_NMOS_ChannelWidth           = 200,
-        _Slv_Inv1_NMOS_ChannelLength          = 30,
-        _Slv_Inv1_NMOS_XVT                    = 'SLVT',
-        _Slv_Inv1_NMOS_POGate_Comb_length     = 100,
-
-        ## Inv1 PMOS
-        _Slv_Inv1_PMOS_NumberofGate           = 1,
-        _Slv_Inv1_PMOS_ChannelWidth           = 400,
-        _Slv_Inv1_PMOS_ChannelLength          = 30,
-        _Slv_Inv1_PMOS_XVT                    = 'SLVT',
-        _Slv_Inv1_PMOS_POGate_Comb_length     = 100,
-
-    ## Slave Inv2 : ReSet driver
-        ## Inv2 common
-
-        ## Inv2 NMOS
-        _Slv_Inv2_NMOS_NumberofGate           = 1,
-        _Slv_Inv2_NMOS_ChannelWidth           = 200,
-        _Slv_Inv2_NMOS_ChannelLength          = 30,
-        _Slv_Inv2_NMOS_XVT                    = 'SLVT',
-        _Slv_Inv2_NMOS_POGate_Comb_length     = 100,
-
-        ## Inv2 PMOS
-        _Slv_Inv2_PMOS_NumberofGate           = 1,
-        _Slv_Inv2_PMOS_ChannelWidth           = 400,
-        _Slv_Inv2_PMOS_ChannelLength          = 30,
-        _Slv_Inv2_PMOS_XVT                    = 'SLVT',
-        _Slv_Inv2_PMOS_POGate_Comb_length     = 100,
-
-
-    ## Slave Inv3 : Qb driver
-        ## Inv3 common
-
-        ## Inv3 NMOS
-        _Slv_Inv3_NMOS_NumberofGate           = 1,
-        _Slv_Inv3_NMOS_ChannelWidth           = 200,
-        _Slv_Inv3_NMOS_ChannelLength          = 30,
-        _Slv_Inv3_NMOS_XVT                    = 'SLVT',
-        _Slv_Inv3_NMOS_POGate_Comb_length     = 100,
-
-        ## Inv3 PMOS
-        _Slv_Inv3_PMOS_NumberofGate           = 1,
-        _Slv_Inv3_PMOS_ChannelWidth           = 400,
-        _Slv_Inv3_PMOS_ChannelLength          = 30,
-        _Slv_Inv3_PMOS_XVT                    = 'SLVT',
-        _Slv_Inv3_PMOS_POGate_Comb_length     = 100,
-
-
-    )
-
-    '''Mode_DRCCHECK '''
-    Mode_DRCCheck = False
-    Num_DRCCheck = 1
-
-    for ii in range(0, Num_DRCCheck if Mode_DRCCheck else 1):
-        if Mode_DRCCheck:
-            ''' Input Parameters for Layout Object '''
-        else:
-            pass
-
-    ''' Generate Layout Object '''
-    ## Gen Object:
-    LayoutObj = _SetRstDFF_Nor_Routing(_DesignParameter=None, _Name=cellname)
-    LayoutObj._CalculateDesignParameter(**InputParams)
-    LayoutObj._UpdateDesignParameter2GDSStructure(_DesignParameterInDictionary=LayoutObj._DesignParameter)
-    testStreamFile = open('./{}'.format(_fileName), 'wb')
-    tmp = LayoutObj._CreateGDSStream(LayoutObj._DesignParameter['_GDSFile']['_GDSFile'])
-    tmp.write_binary_gds_stream(testStreamFile)
-    testStreamFile.close()
-
-    ''' Check Time'''
-    elapsed_time = time.time() - start_time
-    m, s = divmod(elapsed_time, 60)
-    h, m = divmod(m, 60)
-
-    print('###############      Sending to FTP Server...      ##################')
-    My = MyInfo.USER(DesignParameters._Technology)
-    Checker = DRCchecker_KJH0.DRCchecker_KJH0(
-    username=My.ID,
-    password=My.PW,
-    WorkDir=My.Dir_Work,
-    DRCrunDir=My.Dir_DRCrun,
-    libname=libname,
-    cellname=cellname,
-    GDSDir=My.Dir_GDS
-    )
-    Checker.lib_deletion()
-    # Checker.cell_deletion()
-    Checker.Upload2FTP()
-    Checker.StreamIn(tech=DesignParameters._Technology)
-    # Checker_KJH0.DRCchecker()
-
-    print('#############################      Finished      ################################')
-    print('{} Hours   {} minutes   {} seconds'.format(h, m, s))
-
-# end of 'main():' ---------------------------------------------------------------------------------------------
+    for _iter in range(10):
+        ## LibraryName: ex)Proj_ADC_A_my_building_block
+        libname = 'Proj_ZZ00_RcdacSar_D04_01_SetRstDFF_Nor_Routing_random_v{}'.format(_iter + 1)
+        ## CellName: ex)C01_cap_array_v2_84l
+        cellname = 'D04_01_SetRstDFF_Nor_Routing'
+        _fileName = cellname + '.gds'
+
+        Dinput_tg_MOSFinger = random.randrange(1, 5, 1)
+        master_tg_MOSFinger = random.randrange(1, 5, 1)
+        master_nor1_MOSFinger = random.randrange(1, 5, 1)
+        master_nor2_MOSFinger = random.randrange(1, 5, 1)
+        SET_inv1_MOSFinger = random.randrange(1, 5, 1)
+        SET_inv2_MOSFinger = random.randrange(1, 5, 1)
+        CLK_inv_MOSFinger = random.randrange(1, 5, 1)
+
+        Center_tg_MOSFinger = random.randrange(1, 5, 1)
+        slave_tg_MOSFinger = random.randrange(1, 5, 1)
+        slave_nor1_MOSFinger = random.randrange(1, 5, 1)
+        slave_nor2_MOSFinger = random.randrange(1, 5, 1)
+        RESET_inv1_MOSFinger = random.randrange(1, 5, 1)
+        RESET_inv2_MOSFinger = random.randrange(1, 5, 1)
+        qb_out_inv_MOSFinger = random.randrange(1, 5, 1)
+
+        DFF_MOSWidth = random.randrange(200, 601, 50)
+
+        DFF_XVT_list = ['RVT', 'SLVT', 'LVT', 'HVT']
+        # DFF_XVT_list = ['SLVT']
+        DFF_Selected_XVT = random.choice(DFF_XVT_list)
+
+        ''' Input Parameters for Layout Object '''
+        InputParams = dict(
+
+            _Test_distance = 330, # 350
+            _Routing_width =  50,
+            _Routing_distance = 80, #80
+
+        ## DFF Common
+            _DFF_Pbody_NumCont      = 2, # number
+            _DFF_Nbody_NumCont      = 2, # number
+            _DFF_PMOSXvt2NMOSXvt    = 1150, # number
+            _DFF_XvtTop2Pbody       = None, # number/None(Minimum)
+            _DFF_Xvtdown2Nbody      = None, # number/None(Minimum)
+
+        ## Master Xgate1
+            ## Xgate common
+
+            ## Xgate NMOS
+            _Mst_Xgate1_NMOS_NumberofGate           = Dinput_tg_MOSFinger,    #1
+            _Mst_Xgate1_NMOS_ChannelWidth           = DFF_MOSWidth,  #100
+            _Mst_Xgate1_NMOS_ChannelLength          = 30,
+            _Mst_Xgate1_NMOS_XVT                    = DFF_Selected_XVT,
+            _Mst_Xgate1_NMOS_POGate_Comb_length     = 100,
+
+            ## Xgate PMOS
+            _Mst_Xgate1_PMOS_NumberofGate           = Dinput_tg_MOSFinger,    #1
+            _Mst_Xgate1_PMOS_ChannelWidth           = 2*DFF_MOSWidth,  #200
+            _Mst_Xgate1_PMOS_ChannelLength          = 30,
+            _Mst_Xgate1_PMOS_XVT                    = DFF_Selected_XVT,
+            _Mst_Xgate1_PMOS_POGate_Comb_length     = 100,
+
+        ## Master Xgate2
+            ## Xgate common
+
+            ## Xgate NMOS
+            _Mst_Xgate2_NMOS_NumberofGate           = master_tg_MOSFinger,
+            _Mst_Xgate2_NMOS_ChannelWidth           = DFF_MOSWidth,
+            _Mst_Xgate2_NMOS_ChannelLength          = 30,
+            _Mst_Xgate2_NMOS_XVT                    = DFF_Selected_XVT,
+            _Mst_Xgate2_NMOS_POGate_Comb_length     = 100,
+
+            ## Xgate PMOS
+            _Mst_Xgate2_PMOS_NumberofGate           = master_tg_MOSFinger, #2
+            _Mst_Xgate2_PMOS_ChannelWidth           = 2*DFF_MOSWidth,
+            _Mst_Xgate2_PMOS_ChannelLength          = 30,
+            _Mst_Xgate2_PMOS_XVT                    = DFF_Selected_XVT,
+            _Mst_Xgate2_PMOS_POGate_Comb_length     = 100,
+
+
+        ## Master Nor1
+            ## Nor1 common
+
+            ## NMOS
+                ## NMOS common
+            _Mst_Nor1_NMOS_XVT=DFF_Selected_XVT,
+
+                ## NMOSA
+            _Mst_Nor1_NMOSA_NumberofGate           = master_nor1_MOSFinger,
+            _Mst_Nor1_NMOSA_ChannelWidth           = DFF_MOSWidth,
+            _Mst_Nor1_NMOSA_ChannelLength          = 30,
+            _Mst_Nor1_NMOSA_POGate_Comb_length     = 100,
+
+                ## NMOSB
+            _Mst_Nor1_NMOSB_NumberofGate           = master_nor1_MOSFinger,
+            _Mst_Nor1_NMOSB_ChannelWidth           = DFF_MOSWidth,
+            _Mst_Nor1_NMOSB_ChannelLength          = 30,
+            _Mst_Nor1_NMOSB_POGate_Comb_length     = 100,
+
+            ## PMOS
+                ## PMOS common
+            _Mst_Nor1_PMOS_XVT=DFF_Selected_XVT,
+
+                ## PMOSA
+            _Mst_Nor1_PMOSA_NumberofGate            = 2*master_nor1_MOSFinger,
+            _Mst_Nor1_PMOSA_ChannelWidth            = 2*DFF_MOSWidth,
+            _Mst_Nor1_PMOSA_ChannelLength           = 30,
+            _Mst_Nor1_PMOSA_POGate_Comb_length      = 100,
+
+                ## PMOSB
+            _Mst_Nor1_PMOSB_NumberofGate            = 2*master_nor1_MOSFinger,
+            _Mst_Nor1_PMOSB_ChannelWidth            = 2*DFF_MOSWidth,
+            _Mst_Nor1_PMOSB_ChannelLength           = 30,
+            _Mst_Nor1_PMOSB_POGate_Comb_length      = 100,
+
+        ## Master Nor2
+            ## Nor2 common
+
+            ## NMOS
+                ## NMOS common
+            _Mst_Nor2_NMOS_XVT=DFF_Selected_XVT,
+
+                ## NMOSA
+            _Mst_Nor2_NMOSA_NumberofGate           = master_nor2_MOSFinger,
+            _Mst_Nor2_NMOSA_ChannelWidth           = DFF_MOSWidth,
+            _Mst_Nor2_NMOSA_ChannelLength          = 30,
+            _Mst_Nor2_NMOSA_POGate_Comb_length     = 100,
+
+                ## NMOSB
+            _Mst_Nor2_NMOSB_NumberofGate           = master_nor2_MOSFinger,
+            _Mst_Nor2_NMOSB_ChannelWidth           = DFF_MOSWidth,
+            _Mst_Nor2_NMOSB_ChannelLength          = 30,
+            _Mst_Nor2_NMOSB_POGate_Comb_length     = 100,
+
+            ## PMOS
+                ## PMOS common
+            _Mst_Nor2_PMOS_XVT=DFF_Selected_XVT,
+
+                ## PMOSA
+            _Mst_Nor2_PMOSA_NumberofGate            = 2*master_nor2_MOSFinger,
+            _Mst_Nor2_PMOSA_ChannelWidth            = 2*DFF_MOSWidth,
+            _Mst_Nor2_PMOSA_ChannelLength           = 30,
+            _Mst_Nor2_PMOSA_POGate_Comb_length      = 100,
+
+                ## PMOSB
+            _Mst_Nor2_PMOSB_NumberofGate            = 2*master_nor2_MOSFinger,
+            _Mst_Nor2_PMOSB_ChannelWidth            = 2*DFF_MOSWidth,
+            _Mst_Nor2_PMOSB_ChannelLength           = 30,
+            _Mst_Nor2_PMOSB_POGate_Comb_length      = 100,
+
+        ## Master Inv1 : Set pre-driver
+            ## Inv1 common
+
+            ## Inv1 NMOS
+            _Mst_Inv1_NMOS_NumberofGate           = SET_inv1_MOSFinger,
+            _Mst_Inv1_NMOS_ChannelWidth           = DFF_MOSWidth,
+            _Mst_Inv1_NMOS_ChannelLength          = 30,
+            _Mst_Inv1_NMOS_XVT                    = DFF_Selected_XVT,
+            _Mst_Inv1_NMOS_POGate_Comb_length     = 100,
+
+            ## Inv1 PMOS
+            _Mst_Inv1_PMOS_NumberofGate           = SET_inv1_MOSFinger,
+            _Mst_Inv1_PMOS_ChannelWidth           = 2*DFF_MOSWidth,
+            _Mst_Inv1_PMOS_ChannelLength          = 30,
+            _Mst_Inv1_PMOS_XVT                    = DFF_Selected_XVT,
+            _Mst_Inv1_PMOS_POGate_Comb_length     = 100,
+
+        ## Master Inv2 : Set driver
+            ## Inv2 common
+
+            ## Inv2 NMOS
+            _Mst_Inv2_NMOS_NumberofGate           = SET_inv2_MOSFinger,
+            _Mst_Inv2_NMOS_ChannelWidth           = DFF_MOSWidth,
+            _Mst_Inv2_NMOS_ChannelLength          = 30,
+            _Mst_Inv2_NMOS_XVT                    = DFF_Selected_XVT,
+            _Mst_Inv2_NMOS_POGate_Comb_length     = 100,
+
+            ## Inv2 PMOS
+            _Mst_Inv2_PMOS_NumberofGate           = SET_inv2_MOSFinger,
+            _Mst_Inv2_PMOS_ChannelWidth           = 2*DFF_MOSWidth,
+            _Mst_Inv2_PMOS_ChannelLength          = 30,
+            _Mst_Inv2_PMOS_XVT                    = DFF_Selected_XVT,
+            _Mst_Inv2_PMOS_POGate_Comb_length     = 100,
+
+
+        ## Master Inv3 : Clock driver
+            ## Inv3 common
+
+            ## Inv3 NMOS
+            _Mst_Inv3_NMOS_NumberofGate           = CLK_inv_MOSFinger,
+            _Mst_Inv3_NMOS_ChannelWidth           = DFF_MOSWidth,
+            _Mst_Inv3_NMOS_ChannelLength          = 30,
+            _Mst_Inv3_NMOS_XVT                    = DFF_Selected_XVT,
+            _Mst_Inv3_NMOS_POGate_Comb_length     = 100,
+
+            ## Inv3 PMOS
+            _Mst_Inv3_PMOS_NumberofGate           = CLK_inv_MOSFinger,
+            _Mst_Inv3_PMOS_ChannelWidth           = 2*DFF_MOSWidth,
+            _Mst_Inv3_PMOS_ChannelLength          = 30,
+            _Mst_Inv3_PMOS_XVT                    = DFF_Selected_XVT,
+            _Mst_Inv3_PMOS_POGate_Comb_length     = 100,
+
+
+        ## Slave Xgate1
+            ## Xgate common
+
+            ## Xgate NMOS
+            _Slv_Xgate1_NMOS_NumberofGate           = Center_tg_MOSFinger,
+            _Slv_Xgate1_NMOS_ChannelWidth           = DFF_MOSWidth,
+            _Slv_Xgate1_NMOS_ChannelLength          = 30,
+            _Slv_Xgate1_NMOS_XVT                    = DFF_Selected_XVT,
+            _Slv_Xgate1_NMOS_POGate_Comb_length     = 100,
+
+            ## Xgate NMOS
+            _Slv_Xgate1_PMOS_NumberofGate           = Center_tg_MOSFinger,
+            _Slv_Xgate1_PMOS_ChannelWidth           = 2*DFF_MOSWidth,
+            _Slv_Xgate1_PMOS_ChannelLength          = 30,
+            _Slv_Xgate1_PMOS_XVT                    = DFF_Selected_XVT,
+            _Slv_Xgate1_PMOS_POGate_Comb_length     = 100,
+
+        ## Slave Xgate2
+            ## Xgate common
+
+            ## Xgate NMOS
+            _Slv_Xgate2_NMOS_NumberofGate           = slave_tg_MOSFinger,
+            _Slv_Xgate2_NMOS_ChannelWidth           = DFF_MOSWidth,
+            _Slv_Xgate2_NMOS_ChannelLength          = 30,
+            _Slv_Xgate2_NMOS_XVT                    = DFF_Selected_XVT,
+            _Slv_Xgate2_NMOS_POGate_Comb_length     = 100,
+
+            ## Xgate NMOS
+            _Slv_Xgate2_PMOS_NumberofGate           = slave_tg_MOSFinger,
+            _Slv_Xgate2_PMOS_ChannelWidth           = 2*DFF_MOSWidth,
+            _Slv_Xgate2_PMOS_ChannelLength          = 30,
+            _Slv_Xgate2_PMOS_XVT                    = DFF_Selected_XVT,
+            _Slv_Xgate2_PMOS_POGate_Comb_length     = 100,
+
+
+        ## Slave Nor1
+            ## Nor1 common
+
+            ## NMOS
+                ## NMOS common
+            _Slv_Nor1_NMOS_XVT=DFF_Selected_XVT,
+
+                ## NMOSA
+            _Slv_Nor1_NMOSA_NumberofGate           = slave_nor1_MOSFinger,
+            _Slv_Nor1_NMOSA_ChannelWidth           = DFF_MOSWidth,
+            _Slv_Nor1_NMOSA_ChannelLength          = 30,
+            _Slv_Nor1_NMOSA_POGate_Comb_length     = 100,
+
+                ## NMOSB
+            _Slv_Nor1_NMOSB_NumberofGate           = slave_nor1_MOSFinger,
+            _Slv_Nor1_NMOSB_ChannelWidth           = DFF_MOSWidth,
+            _Slv_Nor1_NMOSB_ChannelLength          = 30,
+            _Slv_Nor1_NMOSB_POGate_Comb_length     = 100,
+
+            ## PMOS
+                ## PMOS common
+            _Slv_Nor1_PMOS_XVT=DFF_Selected_XVT,
+
+                ## PMOSA
+            _Slv_Nor1_PMOSA_NumberofGate            = 2*slave_nor1_MOSFinger,
+            _Slv_Nor1_PMOSA_ChannelWidth            = 2*DFF_MOSWidth,
+            _Slv_Nor1_PMOSA_ChannelLength           = 30,
+            _Slv_Nor1_PMOSA_POGate_Comb_length      = 100,
+
+                ## PMOSB
+            _Slv_Nor1_PMOSB_NumberofGate            = 2*slave_nor1_MOSFinger,
+            _Slv_Nor1_PMOSB_ChannelWidth            = 2*DFF_MOSWidth,
+            _Slv_Nor1_PMOSB_ChannelLength           = 30,
+            _Slv_Nor1_PMOSB_POGate_Comb_length      = 100,
+
+        ## Slave Nor2
+            ## Nor2 common
+
+            ## NMOS
+                ## NMOS common
+            _Slv_Nor2_NMOS_XVT=DFF_Selected_XVT,
+
+                ## NMOSA
+            _Slv_Nor2_NMOSA_NumberofGate           = slave_nor2_MOSFinger,
+            _Slv_Nor2_NMOSA_ChannelWidth           = DFF_MOSWidth,
+            _Slv_Nor2_NMOSA_ChannelLength          = 30,
+            _Slv_Nor2_NMOSA_POGate_Comb_length     = 100,
+
+                ## NMOSB
+            _Slv_Nor2_NMOSB_NumberofGate           = slave_nor2_MOSFinger,
+            _Slv_Nor2_NMOSB_ChannelWidth           = DFF_MOSWidth,
+            _Slv_Nor2_NMOSB_ChannelLength          = 30,
+            _Slv_Nor2_NMOSB_POGate_Comb_length     = 100,
+
+            ## PMOS
+                ## PMOS common
+            _Slv_Nor2_PMOS_XVT=DFF_Selected_XVT,
+
+                ## PMOSA
+            _Slv_Nor2_PMOSA_NumberofGate            = 2*slave_nor2_MOSFinger,
+            _Slv_Nor2_PMOSA_ChannelWidth            = 2*DFF_MOSWidth,
+            _Slv_Nor2_PMOSA_ChannelLength           = 30,
+            _Slv_Nor2_PMOSA_POGate_Comb_length      = 100,
+
+                ## PMOSB
+            _Slv_Nor2_PMOSB_NumberofGate            = 2*slave_nor2_MOSFinger,
+            _Slv_Nor2_PMOSB_ChannelWidth            = 2*DFF_MOSWidth,
+            _Slv_Nor2_PMOSB_ChannelLength           = 30,
+            _Slv_Nor2_PMOSB_POGate_Comb_length      = 100,
+
+        ## Slave Inv1 : ReSet pre-driver
+            ## Inv1 common
+
+            ## Inv1 NMOS
+            _Slv_Inv1_NMOS_NumberofGate           = RESET_inv1_MOSFinger,
+            _Slv_Inv1_NMOS_ChannelWidth           = DFF_MOSWidth,
+            _Slv_Inv1_NMOS_ChannelLength          = 30,
+            _Slv_Inv1_NMOS_XVT                    = DFF_Selected_XVT,
+            _Slv_Inv1_NMOS_POGate_Comb_length     = 100,
+
+            ## Inv1 PMOS
+            _Slv_Inv1_PMOS_NumberofGate           = RESET_inv1_MOSFinger,
+            _Slv_Inv1_PMOS_ChannelWidth           = 2*DFF_MOSWidth,
+            _Slv_Inv1_PMOS_ChannelLength          = 30,
+            _Slv_Inv1_PMOS_XVT                    = DFF_Selected_XVT,
+            _Slv_Inv1_PMOS_POGate_Comb_length     = 100,
+
+        ## Slave Inv2 : ReSet driver
+            ## Inv2 common
+
+            ## Inv2 NMOS
+            _Slv_Inv2_NMOS_NumberofGate           = RESET_inv2_MOSFinger,
+            _Slv_Inv2_NMOS_ChannelWidth           = DFF_MOSWidth,
+            _Slv_Inv2_NMOS_ChannelLength          = 30,
+            _Slv_Inv2_NMOS_XVT                    = DFF_Selected_XVT,
+            _Slv_Inv2_NMOS_POGate_Comb_length     = 100,
+
+            ## Inv2 PMOS
+            _Slv_Inv2_PMOS_NumberofGate           = RESET_inv2_MOSFinger,
+            _Slv_Inv2_PMOS_ChannelWidth           = 2*DFF_MOSWidth,
+            _Slv_Inv2_PMOS_ChannelLength          = 30,
+            _Slv_Inv2_PMOS_XVT                    = DFF_Selected_XVT,
+            _Slv_Inv2_PMOS_POGate_Comb_length     = 100,
+
+
+        ## Slave Inv3 : Qb driver
+            ## Inv3 common
+
+            ## Inv3 NMOS
+            _Slv_Inv3_NMOS_NumberofGate           = qb_out_inv_MOSFinger,
+            _Slv_Inv3_NMOS_ChannelWidth           = DFF_MOSWidth,
+            _Slv_Inv3_NMOS_ChannelLength          = 30,
+            _Slv_Inv3_NMOS_XVT                    = DFF_Selected_XVT,
+            _Slv_Inv3_NMOS_POGate_Comb_length     = 100,
+
+            ## Inv3 PMOS
+            _Slv_Inv3_PMOS_NumberofGate           = qb_out_inv_MOSFinger,
+            _Slv_Inv3_PMOS_ChannelWidth           = 2*DFF_MOSWidth,
+            _Slv_Inv3_PMOS_ChannelLength          = 30,
+            _Slv_Inv3_PMOS_XVT                    = DFF_Selected_XVT,
+            _Slv_Inv3_PMOS_POGate_Comb_length     = 100,
+
+
+        )
+
+        '''Mode_DRCCHECK '''
+        Mode_DRCCheck = False
+        Num_DRCCheck = 1
+
+        for ii in range(0, Num_DRCCheck if Mode_DRCCheck else 1):
+            if Mode_DRCCheck:
+                ''' Input Parameters for Layout Object '''
+            else:
+                pass
+
+        ''' Generate Layout Object '''
+        ## Gen Object:
+        LayoutObj = _SetRstDFF_Nor_Routing(_DesignParameter=None, _Name=cellname)
+        LayoutObj._CalculateDesignParameter(**InputParams)
+        LayoutObj._UpdateDesignParameter2GDSStructure(_DesignParameterInDictionary=LayoutObj._DesignParameter)
+        testStreamFile = open('./{}'.format(_fileName), 'wb')
+        tmp = LayoutObj._CreateGDSStream(LayoutObj._DesignParameter['_GDSFile']['_GDSFile'])
+        tmp.write_binary_gds_stream(testStreamFile)
+        testStreamFile.close()
+
+        ''' Check Time'''
+        elapsed_time = time.time() - start_time
+        m, s = divmod(elapsed_time, 60)
+        h, m = divmod(m, 60)
+
+        print('###############      Sending to FTP Server...      ##################')
+        My = MyInfo.USER(DesignParameters._Technology)
+        Checker = DRCchecker_KJH0.DRCchecker_KJH0(
+        username=My.ID,
+        password=My.PW,
+        WorkDir=My.Dir_Work,
+        DRCrunDir=My.Dir_DRCrun,
+        libname=libname,
+        cellname=cellname,
+        GDSDir=My.Dir_GDS
+        )
+        Checker.lib_deletion()
+        # Checker.cell_deletion()
+        Checker.Upload2FTP()
+        Checker.StreamIn(tech=DesignParameters._Technology)
+        # Checker_KJH0.DRCchecker()
+
+        print('#############################      Finished      ################################')
+        print('{} Hours   {} minutes   {} seconds'.format(h, m, s))
+
+    # end of 'main():' ---------------------------------------------------------------------------------------------

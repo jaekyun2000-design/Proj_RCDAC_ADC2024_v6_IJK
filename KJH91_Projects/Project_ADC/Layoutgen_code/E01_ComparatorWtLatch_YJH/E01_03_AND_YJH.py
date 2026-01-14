@@ -132,7 +132,7 @@ class _AND(StickDiagram_KJH1._StickDiagram_KJH):
         _Calculation_Parameters['_NMOSB_SDWidth'] = None
         _Calculation_Parameters['_NMOSB_XVT'] = _AND_NAND_NMOS_XVT
         _Calculation_Parameters['_NMOSB_PCCrit'] = True
-        _Calculation_Parameters['_NMOSB_Source_Via_TF'] = True
+        _Calculation_Parameters['_NMOSB_Source_Via_TF'] = False
         _Calculation_Parameters['_NMOSB_Drain_Via_TF'] = True
         _Calculation_Parameters['_NMOSB_NMOSDummy'] = True
         _Calculation_Parameters['_NMOSB_NMOSDummy_length'] = None

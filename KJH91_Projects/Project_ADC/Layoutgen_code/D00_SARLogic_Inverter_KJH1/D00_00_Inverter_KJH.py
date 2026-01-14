@@ -399,16 +399,60 @@ class _Inverter(StickDiagram_KJH1._StickDiagram_KJH):
                         ## initialized Sref coordinate
         self._DesignParameter['SRF_Pbody']['_XYCoordinates'] = [[0, 0]]
 
+        # if _NMOS_Pbody_XvtTop2Pbody == None:
+        #                     ## Calculate
+        #                         ## Target_coord: _XY_type1
+        #                             ## X
+        #     tmp1 = self.get_outter_KJH4('SRF_NMOS')
+        #     target_coordx = np.round( 0.5 * (tmp1['_Mostright']['coord'][0] + tmp1['_Mostleft']['coord'][0]) )
+        #                             ## Y
+        #     target_coordy = tmp1['_Mostdown']['coord'][0]
+        #
+        #     target_coord = [target_coordx,target_coordy]
+        #
+        #                         ## Approaching_coord: _XY_type2
+        #     tmp2 = self.get_param_KJH4('SRF_Pbody','SRF_PbodyContactPhyLen','BND_Met1Layer')
+        #     approaching_coord = tmp2[0][0][0][0]['_XY_up']
+        #                         ## Sref coord
+        #     tmp3 = self.get_param_KJH4('SRF_Pbody')
+        #     Scoord = tmp3[0][0]['_XY_origin']
+        #                         ## Cal
+        #     New_Scoord = self.get_Scoord_KJH4(target_coord, approaching_coord, Scoord)
+        #     New_Scoord[1] = New_Scoord[1] - 70
+        #     tmpXY.append(New_Scoord)
+        #                 ## Define Coordinates
+        #     self._DesignParameter['SRF_Pbody']['_XYCoordinates'] = tmpXY
+        #
+        # else:
+        #                     ## Calculate
+        #                         ## Target_coord: _XY_type1
+        #                             ## X
+        #     tmp1_1 = self.get_outter_KJH4('SRF_NMOS')
+        #     target_coordx = np.round( 0.5 * (tmp1_1['_Mostright']['coord'][0] + tmp1_1['_Mostleft']['coord'][0]) )
+        #                             ## Y
+        #     tmp1_2 = self.get_param_KJH4('SRF_NMOS','BND_{}Layer'.format(_NMOS_XVT))
+        #     target_coordy = tmp1_2[0][0][0]['_XY_up'][1]
+        #
+        #     target_coord = [target_coordx,target_coordy]
+        #                         ## Approaching_coord: _XY_type2
+        #     tmp2 = self.get_param_KJH4('SRF_Pbody','SRF_PbodyContactPhyLen','BND_Met1Layer')
+        #     approaching_coord = tmp2[0][0][0][0]['_XY_up']
+        #                         ## Sref coord
+        #     tmp3 = self.get_param_KJH4('SRF_Pbody')
+        #     Scoord = tmp3[0][0]['_XY_origin']
+        #                         ## Cal
+        #     New_Scoord = self.get_Scoord_KJH4(target_coord, approaching_coord, Scoord)
+        #     New_Scoord[1] = New_Scoord[1] - _NMOS_Pbody_XvtTop2Pbody
+        #     tmpXY.append(New_Scoord)
+        #                 ## Define Coordinates
+        #     self._DesignParameter['SRF_Pbody']['_XYCoordinates'] = tmpXY
         if _NMOS_Pbody_XvtTop2Pbody == None:
                             ## Calculate
                                 ## Target_coord: _XY_type1
                                     ## X
-            tmp1 = self.get_outter_KJH4('SRF_NMOS')
-            target_coordx = np.round( 0.5 * (tmp1['_Mostright']['coord'][0] + tmp1['_Mostleft']['coord'][0]) )
-                                    ## Y
-            target_coordy = tmp1['_Mostdown']['coord'][0]
+            tmp1_2 = self.get_param_KJH4('SRF_NMOS','BND_{}Layer'.format(_NMOS_XVT))
 
-            target_coord = [target_coordx,target_coordy]
+            target_coord = tmp1_2[0][0][0]['_XY_down']
 
                                 ## Approaching_coord: _XY_type2
             tmp2 = self.get_param_KJH4('SRF_Pbody','SRF_PbodyContactPhyLen','BND_Met1Layer')
@@ -612,17 +656,59 @@ class _Inverter(StickDiagram_KJH1._StickDiagram_KJH):
                         ## initialized Sref coordinate
         self._DesignParameter['SRF_Nbody']['_XYCoordinates'] = [[0, 0]]
 
+        # if _PMOS_Nbody_Xvtdown2Nbody == None:
+        #                     ## Calculate
+        #                         ## Target_coord: _XY_type1
+        #                             ## X
+        #     tmp1_1 = self.get_param_KJH4('SRF_PMOS', 'BND_{}Layer'.format(_PMOS_XVT))
+        #     target_coordx = tmp1_1[0][0][0]['_XY_cent'][0]
+        #                             ## Y
+        #     tmp1_2 = self.get_outter_KJH4('SRF_PMOS')
+        #     target_coordy = tmp1_2['_Mostup']['coord'][0]
+        #
+        #     target_coord = [target_coordx,target_coordy]
+        #                         ## Approaching_coord: _XY_type2
+        #     tmp2 = self.get_param_KJH4('SRF_Nbody','SRF_NbodyContactPhyLen','BND_Met1Layer')
+        #     approaching_coord = tmp2[0][0][0][0]['_XY_down']
+        #                         ## Sref coord
+        #     tmp3 = self.get_param_KJH4('SRF_Nbody')
+        #     Scoord = tmp3[0][0]['_XY_origin']
+        #                         ## Cal
+        #     New_Scoord = self.get_Scoord_KJH4(target_coord, approaching_coord, Scoord)
+        #     New_Scoord[1] = New_Scoord[1] + 70
+        #     tmpXY.append(New_Scoord)
+        #                 ## Define Coordinates
+        #     self._DesignParameter['SRF_Nbody']['_XYCoordinates'] = tmpXY
+        #
+        # else:
+        #                     ## Calculate
+        #                         ## Target_coord: _XY_type1
+        #     tmp1 = self.get_param_KJH4('SRF_PMOS','BND_{}Layer'.format(_PMOS_XVT))
+        #     target_coord = tmp1[0][0][0]['_XY_down']
+        #                         ## Approaching_coord: _XY_type2
+        #     tmp2 = self.get_param_KJH4('SRF_Nbody','SRF_NbodyContactPhyLen','BND_Met1Layer')
+        #     approaching_coord = tmp2[0][0][0][0]['_XY_down']
+        #                         ## Sref coord
+        #     tmp3 = self.get_param_KJH4('SRF_Nbody')
+        #     Scoord = tmp3[0][0]['_XY_origin']
+        #                         ## Cal
+        #     New_Scoord = self.get_Scoord_KJH4(target_coord, approaching_coord, Scoord)
+        #     New_Scoord[1] = New_Scoord[1] + _PMOS_Nbody_Xvtdown2Nbody
+        #     tmpXY.append(New_Scoord)
+        #                 ## Define Coordinates
+        #     self._DesignParameter['SRF_Nbody']['_XYCoordinates'] = tmpXY
+
         if _PMOS_Nbody_Xvtdown2Nbody == None:
                             ## Calculate
                                 ## Target_coord: _XY_type1
                                     ## X
             tmp1_1 = self.get_param_KJH4('SRF_PMOS', 'BND_{}Layer'.format(_PMOS_XVT))
-            target_coordx = tmp1_1[0][0][0]['_XY_cent'][0]
+            target_coordx = tmp1_1[0][0][0]['_XY_up']
                                     ## Y
-            tmp1_2 = self.get_outter_KJH4('SRF_PMOS')
-            target_coordy = tmp1_2['_Mostup']['coord'][0]
+            # tmp1_2 = self.get_outter_KJH4('SRF_PMOS')
+            # target_coordy = tmp1_2['_Mostup']['coord'][0]
 
-            target_coord = [target_coordx,target_coordy]
+            target_coord = target_coordx
                                 ## Approaching_coord: _XY_type2
             tmp2 = self.get_param_KJH4('SRF_Nbody','SRF_NbodyContactPhyLen','BND_Met1Layer')
             approaching_coord = tmp2[0][0][0][0]['_XY_down']
