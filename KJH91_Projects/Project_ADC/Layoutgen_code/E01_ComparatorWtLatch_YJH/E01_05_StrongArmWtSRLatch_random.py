@@ -11,7 +11,7 @@ import time
 
     ## KJH91 Basic Building Blocks
 from KJH91_Projects.Project_ADC.Layoutgen_code.E00_Slicer import Slicer
-from KJH91_Projects.Project_ADC.Layoutgen_code.E01_ComparatorWtLatch_YJH import E01_03_AND_YJH
+from KJH91_Projects.Project_ADC.Layoutgen_code.E01_ComparatorWtLatch_YJH import E01_03_AND_YJH_random
 from KJH91_Projects.Project_ADC.Layoutgen_code.E01_ComparatorWtLatch_YJH import E01_04_SRLatch_random
 from KJH91_Projects.Project_ADC.Layoutgen_code.E01_ComparatorWtLatch_YJH import E01_01_Buffer
 from KJH91_Projects.Project_ADC.Layoutgen_code.A_Basic_Building_Block import A02_ViaStack_KJH3
@@ -960,7 +960,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Calculation_Parameters['_NANDR_NMOSA_GateSpacing'] = None
         _Calculation_Parameters['_NANDR_NMOSA_SDWidth'] = None
         _Calculation_Parameters['_NANDR_NMOSA_XVT'] = _SRLatch_NAND_NMOS_XVT
-        _Calculation_Parameters['_NANDR_NMOSA_PCCrit'] = True
+        _Calculation_Parameters['_NANDR_NMOSA_PCCrit'] = False
         _Calculation_Parameters['_NANDR_NMOSA_Source_Via_TF'] = True
         _Calculation_Parameters['_NANDR_NMOSA_Drain_Via_TF'] = True
         _Calculation_Parameters['_NANDR_NMOSA_NMOSDummy'] = True
@@ -972,8 +972,8 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Calculation_Parameters['_NANDR_NMOSB_GateSpacing'] = None
         _Calculation_Parameters['_NANDR_NMOSB_SDWidth'] = None
         _Calculation_Parameters['_NANDR_NMOSB_XVT'] = _SRLatch_NAND_NMOS_XVT
-        _Calculation_Parameters['_NANDR_NMOSB_PCCrit'] = True
-        _Calculation_Parameters['_NANDR_NMOSB_Source_Via_TF'] = True
+        _Calculation_Parameters['_NANDR_NMOSB_PCCrit'] = False
+        _Calculation_Parameters['_NANDR_NMOSB_Source_Via_TF'] = False
         _Calculation_Parameters['_NANDR_NMOSB_Drain_Via_TF'] = True
         _Calculation_Parameters['_NANDR_NMOSB_NMOSDummy'] = True
         _Calculation_Parameters['_NANDR_NMOSB_NMOSDummy_length'] = None
@@ -987,7 +987,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Calculation_Parameters['_NANDR_PMOSA_GateSpacing'] = None
         _Calculation_Parameters['_NANDR_PMOSA_SDWidth'] = None
         _Calculation_Parameters['_NANDR_PMOSA_XVT'] = _SRLatch_NAND_PMOS_XVT
-        _Calculation_Parameters['_NANDR_PMOSA_PCCrit'] = True
+        _Calculation_Parameters['_NANDR_PMOSA_PCCrit'] = False
         _Calculation_Parameters['_NANDR_PMOSA_Source_Via_TF'] = False  # default
         _Calculation_Parameters['_NANDR_PMOSA_Drain_Via_TF'] = True
         _Calculation_Parameters['_NANDR_PMOSA_PMOSDummy'] = True
@@ -999,7 +999,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Calculation_Parameters['_NANDR_PMOSB_GateSpacing'] = None
         _Calculation_Parameters['_NANDR_PMOSB_SDWidth'] = None
         _Calculation_Parameters['_NANDR_PMOSB_XVT'] = _SRLatch_NAND_PMOS_XVT
-        _Calculation_Parameters['_NANDR_PMOSB_PCCrit'] = True
+        _Calculation_Parameters['_NANDR_PMOSB_PCCrit'] = False
         _Calculation_Parameters['_NANDR_PMOSB_Source_Via_TF'] = False  # default
         _Calculation_Parameters['_NANDR_PMOSB_Drain_Via_TF'] = True
         _Calculation_Parameters['_NANDR_PMOSB_PMOSDummy'] = True
@@ -1015,7 +1015,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Calculation_Parameters['_NANDS_NMOSA_GateSpacing'] =None
         _Calculation_Parameters['_NANDS_NMOSA_SDWidth'] =None
         _Calculation_Parameters['_NANDS_NMOSA_XVT'] = _SRLatch_NAND_NMOS_XVT
-        _Calculation_Parameters['_NANDS_NMOSA_PCCrit'] =True
+        _Calculation_Parameters['_NANDS_NMOSA_PCCrit'] =False
         _Calculation_Parameters['_NANDS_NMOSA_Source_Via_TF'] =True
         _Calculation_Parameters['_NANDS_NMOSA_Drain_Via_TF'] =True
         _Calculation_Parameters['_NANDS_NMOSA_NMOSDummy'] =True
@@ -1027,7 +1027,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Calculation_Parameters['_NANDS_NMOSB_GateSpacing'] =None
         _Calculation_Parameters['_NANDS_NMOSB_SDWidth'] =None
         _Calculation_Parameters['_NANDS_NMOSB_XVT'] = _SRLatch_NAND_NMOS_XVT
-        _Calculation_Parameters['_NANDS_NMOSB_PCCrit'] =True
+        _Calculation_Parameters['_NANDS_NMOSB_PCCrit'] =False
         _Calculation_Parameters['_NANDS_NMOSB_Source_Via_TF'] =False
         _Calculation_Parameters['_NANDS_NMOSB_Drain_Via_TF'] =True
         _Calculation_Parameters['_NANDS_NMOSB_NMOSDummy'] =True
@@ -1042,7 +1042,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Calculation_Parameters['_NANDS_PMOSA_GateSpacing'] =None
         _Calculation_Parameters['_NANDS_PMOSA_SDWidth'] =None
         _Calculation_Parameters['_NANDS_PMOSA_XVT'] = _SRLatch_NAND_PMOS_XVT
-        _Calculation_Parameters['_NANDS_PMOSA_PCCrit'] =True
+        _Calculation_Parameters['_NANDS_PMOSA_PCCrit'] =False
         _Calculation_Parameters['_NANDS_PMOSA_Source_Via_TF'] = False  # default
         _Calculation_Parameters['_NANDS_PMOSA_Drain_Via_TF'] =True
         _Calculation_Parameters['_NANDS_PMOSA_PMOSDummy'] =True
@@ -1054,7 +1054,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Calculation_Parameters['_NANDS_PMOSB_GateSpacing'] =None
         _Calculation_Parameters['_NANDS_PMOSB_SDWidth'] =None
         _Calculation_Parameters['_NANDS_PMOSB_XVT'] = _SRLatch_NAND_PMOS_XVT
-        _Calculation_Parameters['_NANDS_PMOSB_PCCrit'] =True
+        _Calculation_Parameters['_NANDS_PMOSB_PCCrit'] =False
         _Calculation_Parameters['_NANDS_PMOSB_Source_Via_TF'] = False  # default
         _Calculation_Parameters['_NANDS_PMOSB_Drain_Via_TF'] =True
         _Calculation_Parameters['_NANDS_PMOSB_PMOSDummy'] =True
@@ -1213,7 +1213,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
 
 
         ### AND Gate SREF Generation
-        _Caculation_Parameters = copy.deepcopy(E01_03_AND_YJH._AND._ParametersForDesignCalculation)
+        _Caculation_Parameters = copy.deepcopy(E01_03_AND_YJH_random._AND._ParametersForDesignCalculation)
         _Caculation_Parameters['_AND_NAND_NMOS_ChannelWidth'] = _AND_NAND_NMOS_ChannelWidth
         _Caculation_Parameters['_AND_NAND_NMOS_ChannelLength'] = _AND_NAND_NMOS_ChannelLength
         _Caculation_Parameters['_AND_NAND_NMOS_NumberofGate'] = _AND_NAND_NMOS_NumberofGate
@@ -1244,7 +1244,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
 
         ## Generate Sref: ex)self._DesignParameter['_NMOS_POWER'] = self._SrefElementDeclaration(_DesignObj=B16_nmos_power_v2._NMOS_POWER( _DesignParameter=None, _Name='{}:NMOS_POWER'.format(_Name)))[0]
         self._DesignParameter['SRF_AND_CLKIn'] = self._SrefElementDeclaration(
-            _DesignObj=E01_03_AND_YJH._AND(_DesignParameter=None, _Name='{}:SRF_AND_CLKIn'.format(_Name)))[0]
+            _DesignObj=E01_03_AND_YJH_random._AND(_DesignParameter=None, _Name='{}:SRF_AND_CLKIn'.format(_Name)))[0]
 
         ## Define Sref Reflection: ex)self._DesignParameter['_NMOS_POWER']['_Reflect'] = [0, 0, 0]
         self._DesignParameter['SRF_AND_CLKIn']['_Reflect'] = [0, 0, 0]
@@ -1292,7 +1292,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Caculation_Parameters['_NMOS_GateSpacing'] = None
         _Caculation_Parameters['_NMOS_SDWidth'] = None
         _Caculation_Parameters['_NMOS_XVT'] = _CLKSamp_Inv_NMOS_XVT
-        _Caculation_Parameters['_NMOS_PCCrit'] = True
+        _Caculation_Parameters['_NMOS_PCCrit'] = False
         _Caculation_Parameters['_NMOS_Source_Via_TF'] = False
         _Caculation_Parameters['_NMOS_Source_Via_Close2POpin_TF'] = False
         _Caculation_Parameters['_NMOS_Source_Comb_TF'] = False
@@ -1321,7 +1321,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Caculation_Parameters['_PMOS_GateSpacing'] = None
         _Caculation_Parameters['_PMOS_SDWidth'] = None
         _Caculation_Parameters['_PMOS_XVT'] = _CLKSrc_Inv_PMOS_XVT
-        _Caculation_Parameters['_PMOS_PCCrit'] = True
+        _Caculation_Parameters['_PMOS_PCCrit'] = False
         _Caculation_Parameters['_PMOS_Source_Via_TF'] = False
         _Caculation_Parameters['_PMOS_Source_Via_Close2POpin_TF'] = False
         _Caculation_Parameters['_PMOS_Source_Comb_TF'] = False
@@ -1398,7 +1398,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Caculation_Parameters['_NMOS_GateSpacing'] = None
         _Caculation_Parameters['_NMOS_SDWidth'] = None
         _Caculation_Parameters['_NMOS_XVT'] = _CLKSamp_Inv_NMOS_XVT
-        _Caculation_Parameters['_NMOS_PCCrit'] = True
+        _Caculation_Parameters['_NMOS_PCCrit'] = False
         _Caculation_Parameters['_NMOS_Source_Via_TF'] = False
         _Caculation_Parameters['_NMOS_Source_Via_Close2POpin_TF'] = False
         _Caculation_Parameters['_NMOS_Source_Comb_TF'] = False
@@ -1427,7 +1427,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         _Caculation_Parameters['_PMOS_GateSpacing'] = None
         _Caculation_Parameters['_PMOS_SDWidth'] = None
         _Caculation_Parameters['_PMOS_XVT'] = _CLKSamp_Inv_PMOS_XVT
-        _Caculation_Parameters['_PMOS_PCCrit'] = True
+        _Caculation_Parameters['_PMOS_PCCrit'] = False
         _Caculation_Parameters['_PMOS_Source_Via_TF'] = False
         _Caculation_Parameters['_PMOS_Source_Via_Close2POpin_TF'] = False
         _Caculation_Parameters['_PMOS_Source_Comb_TF'] = False
@@ -2672,7 +2672,7 @@ class _StrongArmWtSRLatch(StickDiagram_KJH1._StickDiagram_KJH):
         E01_05_StrongArmWtSRLatch_end_time = time.time()
         self.E01_05_StrongArmWtSRLatch_elapsed_time = E01_05_StrongArmWtSRLatch_end_time - E01_05_StrongArmWtSRLatch_start_time
 
-
+        # 1/14 clear
 ############################################################################################################################################################ START MAIN
 if __name__ == '__main__':
 
@@ -2685,7 +2685,7 @@ if __name__ == '__main__':
         from KJH91_Projects.Project_ADC.Library_and_Engine.Private import MyInfo
         from KJH91_Projects.Project_ADC.Library_and_Engine import DRCchecker_KJH0
 
-        libname = 'Proj_ZZ00_RcdacSar_E01_ComparatorWtLatch_random_v{}'.format(_iter + 21)
+        libname = 'Proj_ZZ00_RcdacSar_E01_ComparatorWtLatch_random_v{}'.format(_iter + 46)
         cellname = 'E01_SALatchWtSRLatch'
         _fileName = cellname + '.gds'
 
@@ -2708,7 +2708,7 @@ if __name__ == '__main__':
         SRinputMOS2Finger = random.choice([i for i in range (1,5) if i != 2])
         MOSChannelWidth = random.randrange(300, 1001, 100)
 
-        SRlatch_MOSFinger = random.choice([i for i in range (1,5) if i != 2])
+        SRlatch_MOSFinger = random.randrange(2, 5, 1)
 
         CLK_MOSFinger = random.choice([i for i in range (1,5) if i != 2])
         Bottom_MOSChannelWidth = random.randrange(300, 1001, 100)
@@ -2718,6 +2718,8 @@ if __name__ == '__main__':
 
         CompCLK_MOS1Finger = random.choice([i for i in range (1,5) if i != 2])
         CompCLK_MOS2Finger = random.choice([i for i in range (1,5) if i != 2])
+
+        # 1/14 NAND source nmos via false로 바꾸는거부터 시작 ~
 
         ''' Input Parameters for Layout Object ''' ############################################################### ^^^^^^^^^^^^^^^^^^^^^
         InputParams = dict(
@@ -2869,12 +2871,12 @@ if __name__ == '__main__':
             _BufSR_NMOS_Pbody_XvtTop2Pbody=None,
             _BufSR_PMOS_Nbody_NumCont=2,
             _BufSR_PMOS_Nbody_Xvtdown2Nbody=None,
-            _BufSR_PMOSXvt2NMOSXvt=1000,
+            _BufSR_PMOSXvt2NMOSXvt=2000,
 
             _CLKInLogic_NMOS_Pbody_Xvtdown2Pbody=None,
             _CLKInLogic_PMOS_Nbody_NumCont=2,
             _CLKInLogic_PMOS_Nbody_Xvtdown2Nbody=None,
-            _CLKInLogic_PMOSXvt2NMOSXvt=1000,
+            _CLKInLogic_PMOSXvt2NMOSXvt=2000,
                             )
 
         '''Mode_DRCCHECK '''

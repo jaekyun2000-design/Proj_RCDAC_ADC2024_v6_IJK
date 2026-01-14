@@ -1542,12 +1542,12 @@ if __name__ == '__main__':
     for _iter in range(5):
 
         ## LibraryName: ex)Proj_ADC_A_my_building_block
-        libname = 'Proj_ZZ01_E01_04_SRLatch_random_v{}'.format(_iter + 38)
+        libname = 'Proj_ZZ01_E01_04_SRLatch_random_v{}'.format(_iter + 43)
         ## CellName: ex)C01_cap_array_v2_84
         cellname = 'E01_01_SRLatch'
         _fileName = cellname + '.gds'
 
-        MOSFinger = random.randrange(1, 5, 1)
+        MOSFinger = random.randrange(2, 5, 1)
         MOSWidth = random.randrange(300, 1001, 100)
         XVT_list = ['RVT', 'SLVT', 'LVT', 'HVT']
         # XVT_list = ['SLVT']
